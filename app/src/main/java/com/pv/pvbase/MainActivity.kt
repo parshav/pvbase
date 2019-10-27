@@ -7,7 +7,9 @@ import com.pv.base.ui
 * This will not yet work as no baseFragment is defined.
 * */
 class MainActivity : BaseActivity() {
+
     override fun uiBuilder() = ui {
         layout = R.layout.activity_main
+        screen = DemoScreen()
     }
 }

@@ -5,11 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-
+import io.reactivex.disposables.Disposable
 
 abstract class BaseScreen : Fragment() {
 
-    private val disposable: MutableList<temp> = mutableListOf()
+    private val disposable: MutableList<Disposable> = mutableListOf()
     private val ui by lazy { ui() }
 
     override fun onCreateView(
@@ -34,18 +34,11 @@ abstract class BaseScreen : Fragment() {
     }
 
     abstract fun ui(): Screen
+    abstract fun bindings(): Array<Disposable>
 
-    abstract fun onViewLoaded(view: View)
-    abstract fun bindings(): Array<temp>
+    open fun screenOnStop() {}
+    open fun onViewLoaded(view: View) {}
 
-    open fun screenOnStop() {
-
-    }
-}
-
-// TEMP CLASS FOR VIEWMODEL BINDINGS
-object temp {
-    fun dispose() {}
 }
 
 class Screen {

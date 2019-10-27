@@ -4,7 +4,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
-import org.koin.dsl.module.module
+import org.koin.dsl.module
 
 /*
 * Very much an experimental Activity helper
