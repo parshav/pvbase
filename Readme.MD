@@ -30,6 +30,6 @@ Resource retriever class, only implementing strings for now.
 
 ### TODO
 
-~~Screen implementation example.~~
-~~Activity implementation example.~~
+* ~~Screen implementation example.~~
+* ~~Activity implementation example.~~
 * Method to pull this repo and modify module name.
