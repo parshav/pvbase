@@ -27,6 +27,8 @@ ext {
     minSdkVersion = 21
     androidxDesignVersion = '1.2.0-alpha01'
 
+    composeVersion = '0.1.0-dev02'
+
     // rx
     rxRelayVersion = '2.1.1'
 
@@ -43,28 +45,34 @@ ext.deps = [
 
         'base'    :
                 [
-                        stdlibKt: "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion",
-                        koin    : "org.koin:koin-androidx-scope:$koinVersion"
+                        stdlibKt : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion",
+                        koin     : "org.koin:koin-androidx-scope:$koinVersion"
 
                 ],
         'androidx':
                 [
-                        ktx   : "androidx.core:core-ktx:$androidKtxVersion",
-                        design: "com.google.android.material:material:$androidxDesignVersion",
+                        ktx    : "androidx.core:core-ktx:$androidKtxVersion",
+                        design : "com.google.android.material:material:$androidxDesignVersion",
                 ],
 
         'rx'      :
                 [
-                        relay: "com.jakewharton.rxrelay2:rxrelay:$rxRelayVersion",
+                        relay : "com.jakewharton.rxrelay2:rxrelay:$rxRelayVersion",
+                ],
+        'compose' :
+                [
+                        tooling : "androidx.ui:ui-tooling:$composeVersion",
+                        layout  :"androidx.ui:ui-layout:$composeVersion",
+                        material: "androidx.ui:ui-material:$composeVersion"
                 ],
 
         // Test Dependencies
         'test'    :
                 [
-                        junit            : "junit:junit:$junitVersion",
-                        core             : "androidx.test:core:$coreVersion",
-                        androidTestRunner: "androidx.test:runner:$androidTestRunnerVersion",
-                        espressoCore     : "com.android.support.test.espresso:espresso-core:$espressoVersion",
+                        junit             : "junit:junit:$junitVersion",
+                        core              : "androidx.test:core:$coreVersion",
+                        androidTestRunner : "androidx.test:runner:$androidTestRunnerVersion",
+                        espressoCore      : "com.android.support.test.espresso:espresso-core:$espressoVersion",
                 ],
 ]
 
