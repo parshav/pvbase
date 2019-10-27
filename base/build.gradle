@@ -1,13 +1,12 @@
-apply plugin: 'com.android.feature'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 28
-    baseFeature true
+    compileSdkVersion 29
 
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
 
@@ -16,13 +15,14 @@ android {
 }
 
 dependencies {
-    application project(':app')
 
     implementation deps.base.stdlibKt
     implementation deps.base.koin
 
     implementation deps.androidx.ktx
     implementation deps.androidx.design
+
+    implementation deps.rx.relay
 
     testImplementation deps.test.junit
     androidTestImplementation deps.test.androidTestRunner

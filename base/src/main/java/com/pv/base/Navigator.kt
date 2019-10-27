@@ -1,8 +1,7 @@
 package com.pv.base
 
 import androidx.fragment.app.Fragment
-import org.koin.dsl.module.module
-
+import org.koin.dsl.module
 /*
 * Navigator file. Test implementation still.
 * */

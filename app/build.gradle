@@ -14,6 +14,7 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -36,6 +37,8 @@ dependencies {
 
     implementation deps.androidx.ktx
     implementation deps.androidx.design
+
+    implementation deps.rx.relay
 
     testImplementation deps.test.junit
     androidTestImplementation deps.test.androidTestRunner
